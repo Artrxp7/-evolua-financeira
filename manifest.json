@@ -1,0 +1,10 @@
+{
+  "name":"Evolua sua Vida Financeira",
+  "short_name":"Evolua",
+  "start_url":"./index.html",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#f4f6f8",
+  "theme_color":"#17202a",
+  "description":"Controle seus gastos, receitas e metas financeiras."
+}
