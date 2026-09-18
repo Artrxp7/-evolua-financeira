@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Evolua sua Vida Financeira</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div><span class="eyebrow">MINHA FINANÇA</span><h1>Evolua sua Vida Financeira</h1></div><button id="resetBtn" class="iconbtn" title="Apagar todos os dados">↺</button></header>
+<main>
+<section class="hero"><div><p class="muted">Saldo disponível</p><div id="balance" class="balance">R$ 0,00</div></div><div id="monthLabel" class="month"></div></section>
+<section class="stats"><div class="stat"><span>Receitas</span><strong id="income">R$ 0,00</strong></div><div class="stat"><span>Despesas</span><strong id="expense">R$ 0,00</strong></div></section>
+
+<section class="panel"><div class="sectionhead"><h2>Resumo do mês</h2></div>
+<div class="bars"><div><span>Receitas</span><div class="bar"><i id="incomeBar"></i></div></div><div><span>Despesas</span><div class="bar"><i id="expenseBar"></i></div></div></div></section>
+
+<section class="panel"><div class="sectionhead"><h2>Adicionar movimentação</h2></div>
+<div class="type"><button class="typebtn active" data-type="income">+ Receita</button><button class="typebtn" data-type="expense">− Despesa</button></div>
+<form id="movementForm"><input id="description" placeholder="Ex.: Salário, lanche..." required><div class="grid"><input id="amount" type="number" min="0.01" step="0.01" placeholder="Valor (R$)" required><select id="category"><option>Salário</option><option>Alimentação</option><option>Transporte</option><option>Casa</option><option>Lazer</option><option>Estudos</option><option>Outros</option></select></div><input id="date" type="date" required><button class="primary" type="submit">Adicionar</button></form>
+</section>
+
+<section class="panel"><div class="sectionhead"><h2>Meta financeira</h2><span id="goalPct">0%</span></div>
+<div class="goalrow"><input id="goalName" placeholder="Nome da meta"><input id="goalValue" type="number" min="0" step="0.01" placeholder="Valor (R$)"></div>
+<div class="progress"><i id="goalProgress"></i></div><p id="goalText" class="muted">Defina uma meta para começar.</p><button id="saveGoal" class="secondary">Salvar meta</button>
+</section>
+
+<section class="panel"><div class="sectionhead"><h2>Movimentações</h2><button id="clearBtn" class="linkbtn">Limpar</button></div><div id="transactions" class="transactions"><p class="empty">Nenhuma movimentação ainda.</p></div></section>
+</main>
+<nav class="nav"><span class="selected">⌂<small>Início</small></span><span>＋<small>Lançar</small></span><span>◎<small>Metas</small></span></nav>
+<script src="app.js"></script>
+<script>if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");</script>
+</body></html>
